@@ -10,7 +10,6 @@
     position: absolute;
     background-color: #888;
     background-position: top center;
-    background-size: cover;
     filter: brightness(0.5);
     width: 100%;
     z-index: -1;
@@ -151,11 +150,13 @@ button:hover {
     section {
         width: calc(25% - 2rem);
         height: calc(50vh - 2rem);
+        overflow-y: scroll;
     }
 
     #bg {
         background-image: url(./files/bgi01.jpg);
         height: 100vh;
+        background-size: cover;
     }
 }
 
@@ -168,11 +169,13 @@ button:hover {
     section {
         width: calc(50% - 2rem);
         height: calc(50vh - 2rem);
+        overflow-y: scroll;
     }
 
     #bg {
         background-image: url(./files/bgi02.jpg);
         height: 200vh;
+        background-size: cover;
     }
 }
 
@@ -191,6 +194,7 @@ button:hover {
     }
 
     #bg {
-        background-image: url(./files/bgi02.jpg);
+        background-image: url(./files/bgi03.png);
+        background-size: repeat;
     }
 }
