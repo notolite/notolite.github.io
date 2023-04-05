@@ -9,6 +9,6 @@ function changelang(lang) {
     document.getElementById(lang).style.borderBottom = "1px white solid";
     if (window.innerWidth < 440) {
         artheight = document.getElementsByTagName("article")[0].offsetHeight;
-        document.getElementById("bg").style.height = artheight / 3 + "px";
+        document.getElementById("bg").style.height = artheight + "px";
     }
 }

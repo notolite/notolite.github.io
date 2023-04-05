@@ -194,6 +194,10 @@ button:hover {
     }
 
     #bg {
+        background: none;
+    }
+
+    article {
         background-image: url(./files/bgi03.png);
         background-size: repeat;
     }
