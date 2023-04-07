@@ -17,10 +17,24 @@
     <article>
         <section id="title">
             <div id="pagename">
-                <h1>notolitary</h1>
+                <h1 class="ln en jp">notolitary</h1>
+                <h1 class="ln tok">lipu&nbsp;Notolitali</h1>
+                <h1 class="ln fr">le&nbsp;notolitaire</h1>
+                <h1 class="ln eo">notolitaro</h1>
+                <!--
                 <div><button onclick="changelang('jp')" id="jp">JPA</button><button onclick="changelang('fr')"
                         id="fr">FRA</button><button onclick="changelang('tok')" id="tok">TOK</button><button
-                        onclick="changelang('en')" id="en">ENG</button></div>
+                        onclick="changelang('en')" id="en">ENG</button><button onclick="changelang('eo')"
+                        id="eo">EPO</button></div>
+                -->
+                <label for="langswitcher"><img src="files/lang.png" alt="language"></label>
+                <select id="langswitcher" onchange="changelang(this.options[this.selectedIndex].value)">
+                    <option value="jp" selected>JPA</option>
+                    <option value="fr">FRA</option>
+                    <option value="tok">TOK</option>
+                    <option value="en">ENG</option>
+                    <option value="eo">EPO</option>
+                </select>
             </div>
         </section>
         <section>
@@ -28,6 +42,7 @@
             <h2 class="ln fr">sur moi (notolyte)</h2>
             <h2 class="ln tok">jan Nanko (mi) li ...</h2>
             <h2 class="ln en">about me (notolyte)</h2>
+            <h2 class="ln eo">pri mi (notolyte)</h2>
             <p>noto- "southern" + lite "stone"</p>
             <p class="ln jp">東京のひと。はたち。私立大学の社会科学の学部生。アカウント名は本名をこねこね変形させたもの。綴りのiとyは間違えました……（今さら変えられない）。</p>
             <p class="ln fr">tokyoïte. 20 ans. étudiant de la science sociale dans une université privée. <br>Le nom sur
@@ -38,13 +53,19 @@
             <p class="ln en">tokyoite. 20 y.o. student of social science at a private univ. <br>The Internet name
                 derives from my real name modified several times following certain rules, but I mistakenly spelt "y" for
                 "i" and it's too late to correct it.</p>
+            <p class="ln eo">de Tokio. 20 jarojn. lernanto de socia scienco en nepublika universitato. <br>La nomo sur
+                interreto venas de mia vera nomo modifata plurfoje laŭ certajn regulojn, sed mi malbone literumis
+                "y" pro "i".</p>
         </section>
         <section>
             <h2 class="ln jp">notolitaryとは</h2>
             <h2 class="ln fr">sur notolitaire</h2>
             <h2 class="ln tok">tawa lipu Notolitali la ...</h2>
             <h2 class="ln en">about notolitary</h2>
-            <p>notolite + -ary</p>
+            <h2 class="ln eo">sur notolitaro</h2>
+            <p class="ln jp en tok">notolite + -ary</p>
+            <p class="ln fr">notolite + -aire</p>
+            <p class="ln eo">notolite + -ar + -o</p>
             <p class="ln jp">notoliteが作ったものを置いておくところ。-aryはラテン語で形容詞を形成する接辞-ariusの中性形-ariumの英語形で，派生名詞を作る。</p>
             <p class="ln fr">Notolitaire est un dépositaire des œuvres crées par moi. « -aire » est la forme française
                 pour des noms dérivés, déscendu du suffixe latin « -arius », qui forme un adjectif d'un nom.</p>
@@ -53,12 +74,15 @@
                 pali ona.</p>
             <p class="ln en">Notolitary is the repository of my work. -ary is an English version of the Latin
                 adjective-forming suffix "-arius", which now functions to generally derive nouns.</p>
+            <p class="ln eo">Notolitaro estas la tenejo de miaj verkaĵoj. "-ar-" estas Esperanta sufikso pro formi
+                kolektan nomon.</p>
         </section>
         <section>
             <h2 class="ln jp">言語</h2>
             <h2 class="ln tok">toki</h2>
             <h2 class="ln fr">langues</h2>
             <h2 class="ln en">languages</h2>
+            <h2 class="ln eo">lingvoj</h2>
             <p class="ln jp">母語：jpa</p>
             <p class="ln jp">履修：eng, fra, eus, lat, yue(zho)</p>
             <p class="ln jp">資格：eng, fra, cmn(zho)</p>
@@ -75,6 +99,10 @@
             <p class="ln tok">kama sona lon tomo sona: eng, fra, eus, lat, yue(zho)</p>
             <p class="ln tok">kulupu sona li pana e pona tawa mi: eng, fra, cmn(zho)</p>
             <p class="ln tok">ante: tok, kor, deu</p>
+            <p class="ln eo">gepatra : jpa</p>
+            <p class="ln eo">lernataj en lernejo :eng, fra, eus, lat, yue(zho)</p>
+            <p class="ln eo">atestataj : eng, fra, cmn(zho)</p>
+            <p class="ln eo">aliaj : tok, kor, deu</p>
         </section>
         <section>
             <h2>les&#160;impressions et les&#160;expressions</h2>
@@ -85,8 +113,11 @@
             <p class="ln jp">短い文章を置くところ。一から書いたり，SNSの文章を転載したりする。</p>
             <p class="ln tok">mi pana e lipu lili tawa lipu ni. tenpo la mi sitelen sin. tenpo la mi pana e lipu mi pi
                 sin ala tan lipu mi ante.</p>
+            <p class="ln eo"><i>Les impressions et les expressions</i> estas mia mallonga blogo. Certaj artikuloj estas
+                origina kaj la aliaj estas kopiataj de miaj skribaĵoj sur sociaj retejoj.</p>
             <p class="ln jp"><a href="./pensee">開く</a></p>
             <p class="ln fr"><a href="./pensee">ouvrir</a></p>
+            <p class="ln eo"><a href="./pensee">malfermi</a></p>
             <p class="ln en tok"><a href="./pensee">open</a></p>
         </section>
         <section>
@@ -97,15 +128,18 @@
             <p class="ln tok">mi pana e toki lili musi tawa lipu ni. toki lili musi sin li lon. toki lili musi tan lipu
                 ante li lon kin.</p>
             <p class="ln jp">短歌を置くところ。一から詠んだり，SNSに投稿した歌を転載したりする。</p>
+            <p class="ln eo">Tiu estas la listo de miaj tanka-oj. Iuj estas originaj kaj la aliaj estas repostaĵoj.</p>
             <p class="ln jp"><a href="./tanka">開く</a></p>
             <p class="ln fr"><a href="./tanka">ouvrir</a></p>
             <p class="ln en tok"><a href="./tanka">open</a></p>
+            <p class="ln eo"><a href="./tanka">malfermi</a></p>
         </section>
         <section>
             <h2 class="ln jp">ツール</h2>
             <h2 class="ln en">tools</h2>
             <h2 class="ln fr">outils</h2>
             <h2 class="ln tok">ilo</h2>
+            <h2 class="ln eo">iloj</h2>
             <ul class="ln jp">
                 <li><a href="./kyouro/">教育ローマ字入力支援</a></li>
                 <li><a href="./pseudovertical/">疑似縦書き生成機</a></li>
@@ -131,11 +165,19 @@
                 <li><a href="./zuipinn">ilo ante tan sitelen Lasin tawa toki Sonko pi sin ala tawa sitelen Sonko</a>
                 </li>
             </ul>
+            <ul class="ln eo">
+                <li><a href="./kyouro/">la helpilo pro enigi Japanan lingvon en Kyōiku Rōmazi</a></li>
+                <li><a href="./pseudovertical/">la generilo de pseŭdo-vertikalaj skribaĵoj pro medioj nul en senstilaj
+                        tekstoj.</a></li>
+                <li><a href="./MississippiGame/">la ludo de Mississippi</a></li>
+                <li><a href="./zuipinn">suggestilo de Hanzi disde romigita Zyeŋió</a></li>
+            </ul>
         </section>
         <section>
             <h2 class="ln jp en">SNS</h2>
             <h2 class="ln tok">ilo toki linluwi</h2>
             <h2 class="ln fr">les réseaux sociaux</h2>
+            <h2 class="ln eo">la sociaj retejoj</h2>
             <ul>
                 <li>Twitter: <a href="https://twitter.com/notolytos">@notolytos</a></li>
                 <li>Misskey: <a href="https://misskey.io/@notolyte">notolyte@misskey.io</a></li>

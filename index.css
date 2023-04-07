@@ -33,6 +33,7 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    width: 100%;
 }
 
 h1 {
@@ -44,59 +45,66 @@ section:nth-child(7n+2) {
     background-color: rgba(96, 72, 150, 0.7);
 }
 
+/*
 section:nth-child(7n+2):hover {
     background-color: rgba(86, 62, 140, 0.7);
 }
-
+*/
 section:nth-child(7n+3) {
     background-color: rgba(193, 152, 89, 0.7);
 }
 
+/*
 section:nth-child(7n+3):hover {
     background-color: rgba(183, 142, 79, 0.7);
 }
-
+*/
 section:nth-child(7n+4) {
     background-color: rgba(27, 88, 124, 0.7);
 }
 
+/*
 section:nth-child(7n+4):hover {
     background-color: rgba(17, 78, 114, 0.7);
 }
-
+*/
 section:nth-child(7n+5) {
     background-color: rgba(159, 41, 54, 0.7);
 }
 
+/*
 section:nth-child(7n+5):hover {
     background-color: rgba(149, 31, 44, 0.7);
 }
-
+*/
 section:nth-child(7n+6) {
     background-color: rgba(78, 133, 86, 0.7);
 }
 
+/*
 section:nth-child(7n+6):hover {
     background-color: rgba(68, 123, 76, 0.7);
 }
-
+*/
 
 section:nth-child(7n) {
     background-color: rgba(240, 127, 9, 0.7);
 }
 
+/*
 section:nth-child(7n):hover {
     background-color: rgba(230, 117, 0, 0.7);
 }
-
+*/
 section:nth-child(7n+1):not(#title) {
     background-color: rgba(50, 50, 50, 0.7);
 }
 
+/*
 section:nth-child(7n+1):not(#title):hover {
     background-color: rgba(40, 40, 40, 0.7);
 }
-
+*/
 h2 {
     text-align: center;
     margin: 1rem 0;
@@ -129,6 +137,7 @@ section:nth-child(8) a::before {
     background-image: url(./files/external-link.png);
 }
 
+/*
 button {
     background: none;
     border: none;
@@ -139,6 +148,24 @@ button {
 button:hover {
     color: #ddd;
     border-bottom: 1px #ddd dotted;
+}
+*/
+
+label img {
+    width: 1.2rem;
+    height: 1.2rem;
+    filter: invert(1);
+}
+
+select {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+option {
+    color: #333;
 }
 
 @media screen and (min-width:700px) {
