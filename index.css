@@ -177,7 +177,7 @@ option {
     section {
         width: calc(25% - 2rem);
         height: calc(50vh - 2rem);
-        overflow-y: scroll;
+        overflow-y: auto;
     }
 
     #bg {
@@ -196,7 +196,7 @@ option {
     section {
         width: calc(50% - 2rem);
         height: calc(50vh - 2rem);
-        overflow-y: scroll;
+        overflow-y: auto;
     }
 
     #bg {
