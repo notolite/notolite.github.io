@@ -2,7 +2,6 @@ window.onload = () => {
     changelang("jp");
 }
 function changelang(lang) {
-    console.log(lang);
     Array.from(document.getElementsByClassName("ln")).forEach(elm => { elm.style.display = "none"; });
     Array.from(document.getElementsByClassName(lang)).forEach(elm => { elm.style.display = "block"; });
     Array.from(document.getElementsByTagName("button")).forEach(elm => { elm.style.borderBottom = null; });

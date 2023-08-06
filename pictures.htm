@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>notolitary</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+    <link rel="icon" type="image/svg+xml" href="./files/favicon.svg">
+    <link rel="icon alternate" type="image/png" href="./files/favicon.png">
+    <link rel='stylesheet' href='index.css'>
+    <style>
+        #main {
+            position: relative;
+        }
+
+        img {
+            display: inline;
+            z-index: inherit;
+            position: inherit;
+            height: 25vh;
+        }
+
+        .selected {
+            display: block;
+            position: fixed;
+            top: 0;
+            height: 100vh;
+            width: 100vw;
+            object-fit: contain;
+            z-index: 1;
+            background-color: black;
+        }
+
+        .message {
+            transition: opacity 0.5s ease;
+            position: fixed;
+            bottom: 5%;
+            padding: 0 2rem;
+            color: #222;
+            left: 50%;
+            text-align: center;
+            transform: translateX(-50%);
+            border-radius: 1rem;
+            background: ivory;
+            z-index: 2;
+            opacity: 1;
+            width: 20rem;
+        }
+
+        .arrow {
+            border-top: #ccc 5px solid;
+            border-left: #ccc 5px solid;
+            position: fixed;
+            top: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            width: 5vh;
+            height: 5vh;
+        }
+
+        #leftarrow {
+            left: 5%;
+            transform: rotate(315deg);
+        }
+
+        #rightarrow {
+            right: 5%;
+            transform: rotate(135deg);
+        }
+
+        a {
+            color: black;
+        }
+
+        a::before {
+            content: '< '
+        }
+
+        .none {
+            opacity: 0;
+        }
+
+        .none2 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main"></div>
+    <div id="notif1" class="message none">click/tap an image to expand</div>
+    <div id="notif2" class="message none">click/tap anywhere to exit</div>
+    <div class="arrow" id="leftarrow"></div>
+    <div class="arrow" id="rightarrow"></div>
+    <p><a href="index.htm">back to the main page</a></p>
+    <script>
+        const num = 118;
+        const notif1 = document.getElementById("notif1").classList;
+        const notif2 = document.getElementById("notif2").classList;
+        const leftArrow = document.getElementById("leftarrow");
+        const rightArrow = document.getElementById("rightarrow");
+        const x1 = document.getElementById("x1");
+        const x2 = document.getElementById("x2");
+        let expansion = 1;
+        let currentSelect = 0;
+        window.onload = () => {
+            const parentElement = document.getElementById("main");
+            for (let i = 1; i <= num; i++) {
+                const item = document.createElement("img");
+                item.src = "./files/pic/" + i + ".jpg";
+                parentElement.prepend(item);
+            }
+            for (let i = 0; i < num; i++) {
+                document.getElementsByTagName("img")[i].addEventListener("click", () => selection(i));
+            }
+            leftArrow.classList.add("none2");
+            rightArrow.classList.add("none2");
+            leftArrow.addEventListener("click", () => changepic(-1));
+            rightArrow.addEventListener("click", () => changepic(1));
+            setTimeout(() => {
+                notif(notif1);
+            }, 500);
+            expansion = 0;
+            window.addEventListener("keydown", event => {
+                if (event.keyCode === 39) {
+                    changepic(1);
+                } else if (event.keyCode === 37) {
+                    changepic(-1);
+                } else {
+                    return;
+                }
+            })
+        }
+        function notif(item) {
+            item.remove("none");
+            setTimeout(() => item.add("none"), 3000);
+        }
+        function selection(index) {
+            currentSelect = index;
+            console.log(currentSelect);
+            const selected = document.getElementsByTagName("img")[index].classList.contains("selected");
+            Array.from(document.getElementsByTagName("img")).forEach(item => item.classList.remove("selected"));
+            if (!selected) {
+                document.getElementsByTagName("img")[index].classList.add("selected");
+                leftArrow.classList.remove("none2");
+                rightArrow.classList.remove("none2");
+            } else {
+                leftArrow.classList.add("none2");
+                rightArrow.classList.add("none2");
+            }
+            if (!expansion) {
+                notif(notif2);
+                expansion = 1;
+            }
+        }
+        function changepic(key) {
+            console.log(currentSelect + key);
+            selection(currentSelect + key);
+        }
+
+
+
+    </script>
+</body>
+
+</html>

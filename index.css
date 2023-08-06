@@ -187,6 +187,11 @@ option {
     }
 }
 
+hr {
+    border-color: white;
+    margin: 10px auto;
+}
+
 @media screen and (max-width:699px) and (min-width: 440px) {
 
     html {
