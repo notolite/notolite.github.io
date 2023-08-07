@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
     <link rel="icon" type="image/svg+xml" href="./files/favicon.svg">
     <link rel="icon alternate" type="image/png" href="./files/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             padding: 0;
+            font-family: 'Lexend';
+            font-size: 80%;
         }
 
         #main {
@@ -71,8 +74,20 @@
             transform: rotate(135deg);
         }
 
-        a {
-            color: black;
+        #back a {
+            color: ivory;
+            text-decoration: none;
+        }
+
+        #back {
+            border-radius: calc(0.5rem + 4px);
+            background: #222;
+            padding: 5px;
+            margin: 5px;
+            width: 10rem;
+            text-align: center;
+            position: fixed;
+            bottom: 5%;
         }
 
         a::before {
@@ -103,9 +118,9 @@
     <div id="notif2" class="message none">click/tap anywhere to exit</div>
     <div class="arrow" id="leftarrow"></div>
     <div class="arrow" id="rightarrow"></div>
-    <p><a href="index.htm">back to the main page</a></p>
+    <p id="back"><a href="index.htm">back to the main page</a></p>
     <script>
-        const num = 118;
+        const num = 119;
         const notif1 = document.getElementById("notif1").classList;
         const notif2 = document.getElementById("notif2").classList;
         const leftArrow = document.getElementById("leftarrow");
