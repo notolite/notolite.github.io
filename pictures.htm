@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
     <link rel="icon" type="image/svg+xml" href="./files/favicon.svg">
     <link rel="icon alternate" type="image/png" href="./files/favicon.png">
-    <link rel='stylesheet' href='index.css'>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         #main {
             position: relative;
         }
@@ -144,7 +148,6 @@
         }
         function selection(index) {
             currentSelect = index;
-            console.log(currentSelect);
             const selected = document.getElementsByTagName("img")[index].classList.contains("selected");
             Array.from(document.getElementsByTagName("img")).forEach(item => item.classList.remove("selected"));
             if (!selected) {
@@ -161,7 +164,8 @@
             }
         }
         function changepic(key) {
-            console.log(currentSelect + key);
+            if (currentSelect == -1) { currentSelect = num; }
+            if (currentSelect == num + 1) { currentSelect = 0 }
             selection(currentSelect + key);
         }
 
