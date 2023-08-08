@@ -133,6 +133,7 @@
         let startX;
         let moveX;
         let dist = 30;
+        const selected = document.getElementsByTagName("img")[index].classList.contains("selected");
         window.onload = () => {
             const parentElement = document.getElementById("main");
             for (let i = 1; i <= num; i++) {
@@ -143,6 +144,7 @@
             for (let i = 0; i < num; i++) {
                 const eachImg = document.getElementsByTagName("img")[i];
                 eachImg.addEventListener("click", () => selection(i));
+
                 eachImg.addEventListener("touchstart", function (e) {
                     startX = e.touches[0].pageX;
                 });
@@ -150,13 +152,15 @@
                     moveX = e.changedTouches[0].pageX;
                 });
                 eachImg.addEventListener("touchend", function (e) {
-                    if (startX > moveX && startX > moveX + dist) {
-                        changepic(1);
-                    }
-                    else if (startX < moveX && startX + dist < moveX) {
-                        changepic(-1);
-                    } else if ((startX > moveX && startX < moveX + dist) || (startX < moveX && startX < moveX + dist)) {
-                        selection(i);
+                    if (selected) {
+                        if (startX > moveX && startX > moveX + dist) {
+                            changepic(1);
+                        }
+                        else if (startX < moveX && startX + dist < moveX) {
+                            changepic(-1);
+                        } else if ((startX > moveX && startX < moveX + dist) || (startX < moveX && startX < moveX + dist)) {
+                            selection(i);
+                        }
                     }
                 });
             }
@@ -185,7 +189,6 @@
         }
         function selection(index) {
             currentSelect = index;
-            const selected = document.getElementsByTagName("img")[index].classList.contains("selected");
             Array.from(document.getElementsByTagName("img")).forEach(item => item.classList.remove("selected"));
             if (!selected) {
                 document.getElementsByTagName("img")[index].classList.add("selected");
