@@ -39,9 +39,11 @@
 
         .message {
             transition: opacity 0.5s ease;
+            border-radius: calc(0.5rem + 4px);
+            padding: 5px 10px;
+            margin: 5px;
             position: fixed;
             bottom: 5%;
-            padding: 0 2rem;
             color: #222;
             left: 50%;
             text-align: center;
@@ -50,7 +52,6 @@
             background: ivory;
             z-index: 2;
             opacity: 1;
-            width: 20rem;
         }
 
         .arrow {
@@ -81,9 +82,9 @@
 
         #back {
             border-radius: calc(0.5rem + 4px);
-            background: #222;
             padding: 5px;
             margin: 5px;
+            background: #222;
             width: 10rem;
             text-align: center;
             position: fixed;
@@ -129,6 +130,9 @@
         const x2 = document.getElementById("x2");
         let expansion = 1;
         let currentSelect = 0;
+        let startX;
+        let moveX;
+        let dist = 30;
         window.onload = () => {
             const parentElement = document.getElementById("main");
             for (let i = 1; i <= num; i++) {
@@ -137,8 +141,26 @@
                 parentElement.prepend(item);
             }
             for (let i = 0; i < num; i++) {
-                document.getElementsByTagName("img")[i].addEventListener("click", () => selection(i));
+                const eachImg = document.getElementsByTagName("img")[i];
+                eachImg.addEventListener("click", () => selection(i));
+                eachImg.addEventListener("touchstart", function (e) {
+                    e.preventDefault();
+                    startX = e.touches[0].pageX;
+                });
+                eachImg.addEventListener("touchmove", function (e) {
+                    e.preventDefault();
+                    moveX = e.changedTouches[0].pageX;
+                });
+                eachImg.addEventListener("touchend", function (e) {
+                    if (startX > moveX && startX > moveX + dist) {
+                        changepic(1);
+                    }
+                    else if (startX < moveX && startX + dist < moveX) {
+                        changepic(-1);
+                    }
+                });
             }
+
             leftArrow.classList.add("none2");
             rightArrow.classList.add("none2");
             leftArrow.addEventListener("click", () => changepic(-1));
