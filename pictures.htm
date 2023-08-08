@@ -103,7 +103,25 @@
             display: none;
         }
 
+        @media screen and (min-width:440px) {
+            #notif1::before {
+                content: 'Click an image to expand.'
+            }
+
+            #notif2::before {
+                content: 'Click anywhere to exit. Click arrow or push arrow key for next image.';
+            }
+        }
+
         @media screen and (max-width:439px) {
+            #notif1::before {
+                content: 'Tap an image to expand.'
+            }
+
+            #notif2::before {
+                content: 'Tap anywhere to exit. Tap arrow or swipe for next image.';
+            }
+
             img {
                 width: 33vw;
                 height: 33vw;
@@ -115,9 +133,8 @@
 
 <body>
     <div id="main"></div>
-    <div id="notif1" class="message none">Click/tap an image to expand.</div>
-    <div id="notif2" class="message none">Click/tap anywhere to exit. Click/tap the arrow, push arrow key or swipe
-        horizontally to select the next image.</div>
+    <div id="notif1" class="message none"></div>
+    <div id="notif2" class="message none"></div>
     <div class="arrow" id="leftarrow"></div>
     <div class="arrow" id="rightarrow"></div>
     <p id="back"><a href="index.htm">back to the main page</a></p>
