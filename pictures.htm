@@ -144,11 +144,9 @@
                 const eachImg = document.getElementsByTagName("img")[i];
                 eachImg.addEventListener("click", () => selection(i));
                 eachImg.addEventListener("touchstart", function (e) {
-                    e.preventDefault();
                     startX = e.touches[0].pageX;
                 });
                 eachImg.addEventListener("touchmove", function (e) {
-                    e.preventDefault();
                     moveX = e.changedTouches[0].pageX;
                 });
                 eachImg.addEventListener("touchend", function (e) {
