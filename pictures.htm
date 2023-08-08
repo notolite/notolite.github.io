@@ -133,7 +133,7 @@
         let startX;
         let moveX;
         let dist = 30;
-        const selected = document.getElementsByTagName("img")[index].classList.contains("selected");
+
         window.onload = () => {
             const parentElement = document.getElementById("main");
             for (let i = 1; i <= num; i++) {
@@ -152,7 +152,7 @@
                     moveX = e.changedTouches[0].pageX;
                 });
                 eachImg.addEventListener("touchend", function (e) {
-                    if (selected) {
+                    if (eachImg.classList.contains("selected")) {
                         if (startX > moveX && startX > moveX + dist) {
                             changepic(1);
                         }
@@ -189,6 +189,7 @@
         }
         function selection(index) {
             currentSelect = index;
+            const selected = document.getElementsByTagName("img")[index].classList.contains("selected");
             Array.from(document.getElementsByTagName("img")).forEach(item => item.classList.remove("selected"));
             if (!selected) {
                 document.getElementsByTagName("img")[index].classList.add("selected");
