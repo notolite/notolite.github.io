@@ -118,6 +118,10 @@ a {
     color: white;
 }
 
+.ln {
+    display: none;
+}
+
 section a::before {
     display: inline-block;
     background-size: cover;
