@@ -172,6 +172,10 @@ option {
     color: #333;
 }
 
+span .ln {
+    display: inline;
+}
+
 @media screen and (min-width:700px) {
 
     html {

@@ -1,10 +1,10 @@
 window.onload = () => {
     changelang("jp");
-    calcAge();
+    usa0ynjnkd();
 }
 function changelang(lang) {
     Array.from(document.getElementsByClassName("ln")).forEach(elm => { elm.style.display = "none"; });
-    Array.from(document.getElementsByClassName(lang)).forEach(elm => { elm.style.display = "block"; });
+    Array.from(document.getElementsByClassName(lang)).forEach(elm => { elm.style.display = "revert"; });
     Array.from(document.getElementsByTagName("button")).forEach(elm => { elm.style.borderBottom = null; });
     let ttl;
     switch (lang) {
@@ -28,17 +28,16 @@ function changelang(lang) {
     }
 }
 
-function calcAge() {
-    const currentDate = new Date();
-    let year = currentDate.getFullYear();
-    const month = currentDate.getMonth();
-    const date = currentDate.getDate();
-    if (month == 11 && date > 6) {
-        year += 1;
+function usa0ynjnkd() {
+    const avtyvh84o3 = new Date();
+    let uelogheyl7 = avtyvh84o3.getFullYear();
+    const wywwapkaqn = avtyvh84o3.getMonth();
+    const ylpc2yiugu = avtyvh84o3.getDate();
+    if (wywwapkaqn == 11 && ylpc2yiugu > 6) {
+        uelogheyl7 += 1;
     }
-    const age = year - 2003;
-    Array.from(document.getElementsByClassName("age")).forEach(elm => {
-        elm.innerText = age;
+    const ptqt3csu8r = uelogheyl7 - 2003;
+    Array.from(document.getElementsByClassName("m1lw7tvoko")).forEach(elm => {
+        elm.innerText = ptqt3csu8r;
     });
-    console.log(age);
 }
