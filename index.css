@@ -45,6 +45,11 @@ section:nth-child(7n+2) {
     background-color: rgba(96, 72, 150, 0.7);
 }
 
+h3 {
+    font-weight: normal;
+    font-size: small;
+}
+
 /*
 section:nth-child(7n+2):hover {
     background-color: rgba(86, 62, 140, 0.7);
