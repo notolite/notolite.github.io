@@ -115,10 +115,6 @@ h2 {
     margin: 1rem 0;
 }
 
-ul li {
-    list-style: none;
-}
-
 a {
     color: white;
 }
@@ -144,6 +140,10 @@ section:nth-child(n+5):nth-child(-n+7) a::before {
 
 section:nth-child(8) a::before {
     background-image: url(./files/external-link.png);
+}
+
+ul {
+    list-style: none;
 }
 
 /*
@@ -198,6 +198,7 @@ span .ln {
         height: 100vh;
         background-size: cover;
     }
+
 }
 
 hr {
