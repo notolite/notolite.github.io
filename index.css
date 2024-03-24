@@ -244,7 +244,6 @@ hr {
     }
 
     article {
-        background-image: url(./files/bgi03.png);
-        background-size: repeat;
+        background: url(./files/bgi03.jpg) center/60% repeat;
     }
 }
