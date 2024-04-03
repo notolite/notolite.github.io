@@ -133,12 +133,12 @@ section a::before {
     content: '';
 }
 
-section:nth-child(n+5):nth-child(-n+7) a::before {
+a.in::before {
     background-image: url(./files/internal-link.png);
     transform: rotate(135deg);
 }
 
-section:nth-child(8) a::before {
+a.ex::before {
     background-image: url(./files/external-link.png);
 }
 
