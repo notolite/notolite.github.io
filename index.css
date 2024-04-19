@@ -162,7 +162,6 @@ button:hover {
 label img {
     width: 1.2rem;
     height: 1.2rem;
-    filter: invert(1);
 }
 
 select {

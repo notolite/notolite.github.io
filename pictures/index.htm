@@ -91,6 +91,12 @@
             bottom: 5%;
         }
 
+        .hidden {
+            filter: blur(30px);
+
+        }
+
+
         a::before {
             content: '< '
         }
@@ -158,6 +164,7 @@
                 const item = document.createElement("img");
                 item.src = "./" + i + ".jpg";
                 parentElement.append(item);
+                if (i == 204 || i == 157) { item.classList.add("hidden"); }
             }
             for (let i = 0; i < num; i++) {
                 const eachImg = document.getElementsByTagName("img")[i];
