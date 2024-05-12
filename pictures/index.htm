@@ -162,7 +162,7 @@
             const parentElement = document.getElementById("main");
             for (let i = num; i >= 1; i--) {
                 const item = document.createElement("img");
-                item.src = "./" + i + ".jpg";
+                item.src = "./pictures/" + i + ".jpg";
                 parentElement.append(item);
                 if (i == 204 || i == 157) { item.classList.add("hidden"); }
             }
