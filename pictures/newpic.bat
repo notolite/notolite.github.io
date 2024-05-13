@@ -4,7 +4,7 @@ for /f %%a in ('%cmd%') do (
     set fileCount=%%a
 )
 cd ..
-set /a  imageFiles = %fileCount% - 3
+set /a  imageFiles = %fileCount%
 echo const num ^= %imageFiles%; > picnum.js
 git add *
 git commit -m "new post(s)"
