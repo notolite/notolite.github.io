@@ -2,8 +2,19 @@
     margin: 0;
     padding: 0;
     line-height: 2rem;
+}
+
+body,
+option,
+select {
     font-family: 'Lexend', 'Noto Sans JP';
 }
+
+.zh,
+.zh * {
+    font-family: 'Lexend', 'Noto Sans TC' !important;
+}
+
 
 
 #bg {
