@@ -213,6 +213,7 @@ span .ln {
 hr {
     border-color: white;
     margin: 10px auto;
+    background-color: white;
 }
 
 @media screen and (max-width:699px) and (min-width: 440px) {
