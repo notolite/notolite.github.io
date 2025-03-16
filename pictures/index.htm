@@ -163,6 +163,7 @@
             for (let i = num; i >= 1; i--) {
                 const item = document.createElement("img");
                 item.src = "./pictures/" + i + ".jpg";
+                item.loading = "lazy";
                 parentElement.append(item);
                 if (i == 204 || i == 157) { item.classList.add("hidden"); }
             }
