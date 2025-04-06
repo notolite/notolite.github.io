@@ -1,5 +1,6 @@
 window.onload = () => {
-    changelang("jp");
+    navilang = window.navigator.languages[0].split("-")[0];
+    changelang(navilang);
     usa0ynjnkd();
 }
 function changelang(lang) {
