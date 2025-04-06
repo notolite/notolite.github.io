@@ -1,12 +1,21 @@
 window.onload = () => {
-    navilang = window.navigator.languages[0].split("-")[0];
-    changelang(navilang);
+    lang = langpref();
+    changelang(lang);
     usa0ynjnkd();
 }
+function langpref() {
+    langs = window.navigator.languages;
+    list = ["ja", "fr", "eo", "en", "tok", "zh"];
+    for (let i = 0; i < langs.length; i++) {
+        for (let j = 0; j < list.length; j++) {
+            if (langs[i].split("-")[0] == list[j]) {
+                return list[j];
+            }
+        }
+    }
+    return "ja";
+}
 function changelang(lang) {
-    Array.from(document.getElementsByClassName("ln")).forEach(elm => { elm.style.display = "none"; });
-    Array.from(document.getElementsByClassName(lang)).forEach(elm => { elm.style.display = "revert"; });
-    Array.from(document.getElementsByTagName("button")).forEach(elm => { elm.style.borderBottom = null; });
     let ttl;
     switch (lang) {
         case "fr":
@@ -22,6 +31,10 @@ function changelang(lang) {
             ttl = "notolitary";
             break
     }
+    Array.from(document.getElementsByClassName("ln")).forEach(elm => { elm.style.display = "none"; });
+    Array.from(document.getElementsByClassName(lang)).forEach(elm => { elm.style.display = "revert"; });
+    Array.from(document.getElementsByTagName("button")).forEach(elm => { elm.style.borderBottom = null; });
+
     document.title = ttl;
     if (window.innerWidth < 440) {
         artheight = document.getElementsByTagName("article")[0].offsetHeight;
