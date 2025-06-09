@@ -47,10 +47,16 @@ function usa0ynjnkd() {
     let uelogheyl7 = avtyvh84o3.getFullYear();
     const wywwapkaqn = avtyvh84o3.getMonth();
     const ylpc2yiugu = avtyvh84o3.getDate();
+    const cadcnfvf = 350;
+    const vgonsdfb = 789;
+    const dhaof4dh = 5968;
+    const fcnadfovn = 340;
+    const casdocu = 648;
+    const asdfadfvbafd = 296;
     if (wywwapkaqn == 11 && ylpc2yiugu > 6) {
         uelogheyl7 += 1;
     }
-    const ptqt3csu8r = uelogheyl7 - 2003;
+    const ptqt3csu8r = uelogheyl7 - (cadcnfvf / 7 - fcnadfovn * 2 + vgonsdfb + dhaof4dh / 4 - asdfadfvbafd + casdocu);
     Array.from(document.getElementsByClassName("m1lw7tvoko")).forEach(elm => {
         elm.innerText = ptqt3csu8r;
     });
