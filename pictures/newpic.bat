@@ -4,18 +4,22 @@ setlocal enabledelayedexpansion
 set "folder=pictures"
 cd /d "%~dp0\%folder%"
 
-set count=0
 for %%f in (*.png) do (
     cwebp -q 80 "%%f" -o "%%~nf.webp"
     if exist "%%~nf.webp" (
         del "%%f"
-        set /a count+=1
     )
 )
+set /a count=0
+for %%f in (*) do (
+    set /a count+=1
+)
 cd /d "%~dp0"
-set /a adjustedCount=count - 1 >nul
-echo const num=%adjustedCount%;> picnum.js
+echo const num=%count%;> picnum.js
+echo content in pictures folder shown as below
 dir pictures
+echo content of picnum.js shown as below
+type picnum.js
 choice /c YN /n /m "Do you want to upload the files in succession? (Y/N)"
 if errorlevel 2 (
     echo images are not uploaded yet
