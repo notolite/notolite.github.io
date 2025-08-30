@@ -40,6 +40,7 @@ function changelang(lang) {
         artheight = document.getElementsByTagName("article")[0].offsetHeight;
         document.getElementById("bg").style.height = artheight + "px";
     }
+    responsive_circle();
 }
 
 function usa0ynjnkd() {
@@ -60,4 +61,15 @@ function usa0ynjnkd() {
     Array.from(document.getElementsByClassName("m1lw7tvoko")).forEach(elm => {
         elm.innerText = ptqt3csu8r;
     });
+}
+function responsive_circle() {
+    let h = 0;
+    if (window.innerWidth < 440) {
+        for (let i = 0; i < 8; i++) {
+            h = document.querySelectorAll("section > div")[i].clientHeight;
+            console.log(h);
+            document.querySelectorAll("section")[i].style.minWidth = h + "px";
+            document.querySelectorAll("section")[i].style.minHeight = h + "px";
+        }
+    }
 }
