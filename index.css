@@ -4,6 +4,10 @@
     line-height: 2rem;
 }
 
+:root {
+    font-size: 1.5vh;
+}
+
 body,
 option,
 select {
