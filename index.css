@@ -215,9 +215,9 @@ span .ln {
 }
 
 hr {
-    border-color: white;
     margin: 10px auto;
-    background-color: white;
+    border: none;
+    border-top: solid 1px white;
 }
 
 ::-webkit-scrollbar {
