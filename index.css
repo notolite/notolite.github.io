@@ -140,7 +140,7 @@ span .ln {
     }
 
     html {
-        font-size: 75%;
+    /*    font-size: 75%; */
     }
 
     section {
@@ -224,17 +224,19 @@ span .ln {
 }
 
 hr {
+
 <<<<<<< HEAD
     margin: 10px auto;
     height: 1px;
 	background-color: white;
 	border: none;
-	
+/*	
 =======
     border-color: var(--base-colour);
     margin: 10px auto;
     background-color: var(--base-colour);
 >>>>>>> 628f152 (new page)
+*/
 }
 
 ::-webkit-scrollbar {
@@ -252,11 +254,11 @@ hr {
 }
 
 @media screen and (max-width:699px) and (min-width: 440px) {
-
+/*
     html {
         font-size: 75%;
     }
-
+*/
     section {
         width: calc(50% - 2rem);
         height: calc(50vh - 2rem);
