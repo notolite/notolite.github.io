@@ -301,6 +301,10 @@ hr {
 		text-align: left;
 		width: 90vw;
 	}
+	a {
+		text-decoration: none;
+		border-bottom: 0.5px dotted #cce;
+	}
 	a::before{
 		filter: invert(1);
 	}
