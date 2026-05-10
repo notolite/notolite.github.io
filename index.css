@@ -223,12 +223,9 @@ ul {
 }
 
 hr {
-
-<<<<<<< HEAD
     margin: 10px auto;
-    height: 1px;
-	background-color: white;
 	border: none;
+	border-bottom: 1px solid white;
 /*	
 =======
     border-color: var(--base-colour);
